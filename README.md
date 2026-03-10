@@ -1,4 +1,4 @@
-# Юркин Александр ИТС-1 Лабораторная №1
+# Юркин Александр ИТС-1 Лабораторная №3
 
 # Задание 1.
 
@@ -21,7 +21,7 @@
 
 ### Тестирование.
 
-![Image alt](https://github.com/Alexander5265/Lab_2/raw/main/2_1/debug 2_1.png)
+![Image alt](https://github.com/Alexander5265/Lab_3/raw/main/3_1/debug3_1.png)
 
 # Задание 2.
 
@@ -43,7 +43,7 @@
 
 ### Тестирование.
 
-
+![Image alt](https://github.com/Alexander5265/Lab_3/raw/main/3_2/debug3_2.png)
 
 # Задание 3.
 
@@ -65,3 +65,5 @@
 5. В случае нахождения файла (true) - поиск останавливается, а на экран выводится "Файл найден.".
 
 ### Тестирование.
+
+![Image alt](https://github.com/Alexander5265/Lab_3/raw/main/3_3/debug3_3.png)
