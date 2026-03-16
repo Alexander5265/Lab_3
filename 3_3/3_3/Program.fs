@@ -1,4 +1,4 @@
-﻿open System
+open System
 open System.IO
 
 // Проверяет, существует ли файл с заданным именем
@@ -7,6 +7,16 @@ let fileExists (directoryPath: string) (fileName: string) =
     |> Seq.exists (fun file ->
         Path.GetFileName(file) = fileName
     )
+
+let noMistakes directoryPath fileName =
+    try 
+        if fileExists directoryPath fileName then
+            printfn "Файл найден."
+        else
+            printfn "Файл не найден."
+    with 
+        | _ -> printfn "Ошибка ввода!"
+
 
 [<EntryPoint>]
 let main argv =
@@ -17,11 +27,5 @@ let main argv =
     printf "Введите имя файла: "
     let fileName = Console.ReadLine()
 
-    let exists = fileExists directoryPath fileName
-
-    if exists then
-        printfn "Файл найден."
-    else
-        printfn "Файл не найден."
-
+    noMistakes directoryPath fileName
     0
