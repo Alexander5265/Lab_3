@@ -1,4 +1,4 @@
-﻿open System
+open System
 
 // Функция для вычисления произведения цифр числа
 let product (n: int) =
@@ -8,14 +8,17 @@ let product (n: int) =
     |> Seq.map (fun c -> int c - int '0')
     |> Seq.fold (fun acc digit -> acc * digit) 1
 
-// Функция, которая получает список произведений цифр
-let getProducts (numbers: int list) =
-    numbers |> List.map product
+// Функция, которая получает последовательность произведений цифр
+let getProducts (numbers: seq<int>) =
+    numbers |> Seq.map product
 
-printfn "Исходный список через пробел: "
+printfn "Исходная последовательность через пробел:"
 let input1 = Console.ReadLine()
-let list1 = input1.Split(' ') |> Array.toList |> List.map int
 
-let result = getProducts list1
+let seq1 =
+    input1.Split(' ')
+    |> Seq.map int
+
+let result = getProducts seq1
 
 printfn "%A" result
