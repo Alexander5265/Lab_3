@@ -5,8 +5,7 @@ open System.IO
 let fileExists (directoryPath: string) (fileName: string) =
     Directory.EnumerateFiles(directoryPath, "*", SearchOption.AllDirectories)
     |> Seq.exists (fun file ->
-        Path.GetFileName(file) = fileName
-    )
+        Path.GetFileName(file) = fileName)
 
 let noMistakes directoryPath fileName =
     try 
