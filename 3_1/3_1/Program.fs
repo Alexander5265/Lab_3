@@ -12,13 +12,17 @@ let product (n: int) =
 let getProducts (numbers: seq<int>) =
     numbers |> Seq.map product
 
-printfn "Исходная последовательность через пробел:"
-let input1 = Console.ReadLine()
+[<EntryPoint>]
+let main argv =
 
-let seq1 =
-    input1.Split(' ')
-    |> Seq.map int
+    printfn "Исходная последовательность через пробел:"
+    let input1 = Console.ReadLine()
 
-let result = getProducts seq1
+    let seq1 =
+        input1.Split(' ')
+       |> Seq.map int
 
-printfn "%A" result
+    let result = getProducts seq1
+    printfn "%A" result
+
+    0
